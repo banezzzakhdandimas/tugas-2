@@ -3,102 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio CV | Dimas Yanto</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Curriculum Vitae - Dimas Yanto</title>
+    <!-- Menggunakan Lucide Icons untuk estetika -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #40916c;
+            --soft-green: #d8f3dc;
+            --accent-green: #95d5b2;
+            --dark-text: #1b4332;
+            --bg-color: #f8fdf9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Sidebar / Left Column */
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--primary-green);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-green);
+            object-fit: cover;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            font-size: 14px;
+            background: var(--light-green);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .info-item i {
+            margin-right: 15px;
+            color: var(--accent-green);
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            border-bottom: 2px solid var(--accent-green);
+            margin: 30px 0 15px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--light-green);
+            padding: 5px 12px;
+            border-radius: 5px;
+            margin: 0 5px 10px 0;
+            font-size: 13px;
+        }
+
+        /* Main Content / Right Column */
+        .main-content {
+            flex: 2;
+            min-width: 350px;
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .section-header h2 {
+            margin-left: 10px;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .timeline-item {
+            border-left: 2px solid var(--soft-green);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--light-green);
+            border-radius: 50%;
+        }
+
+        .year {
+            font-weight: bold;
+            color: var(--light-green);
+            font-size: 14px;
+        }
+
+        .school-name {
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+        }
+
+        .hobby-card {
+            background: var(--soft-green);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hobby-card i {
+            margin-right: 15px;
+            color: var(--primary-green);
+        }
+
+        .cert-item {
+            background: #fff;
+            border: 1px solid var(--soft-green);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header class="sidebar">
+
+    <div class="cv-container">
+        <!-- Bagian Kiri -->
+        <div class="sidebar">
             <div class="profile-section">
-                <img src="https://via.placeholder.com/150" alt="Foto Dimas Yanto" class="profile-img">
-                <h1>DIMAS YANTO</h1>
-                <p class="status">Pelajar & Olahragawan</p>
+                <!-- Gunakan placeholder atau ganti dengan file foto Anda -->
+                <img src="Gemini -generated-image-x8ebr2x8eb(1.).png" alt="Foto Dimas Yanto" class="profile-photo">
+                <h1 class="name">Dimas Yanto</h1>
+                <span class="status">Pelajar Aktif</span>
+                <p style="font-size: 14px; opacity: 0.9; font-style: italic;">"Saya adalah pribadi yang percaya diri, disiplin, dan memiliki semangat tinggi dalam belajar maupun berolahraga."</p>
             </div>
 
+            <h3 class="sidebar-title">Kontak</h3>
             <div class="contact-info">
-                <h3>KONTAK</h3>
-                <div class="item">
-                    <i class="fas fa-phone"></i>
+                <div class="info-item">
+                    <i data-lucide="phone"></i>
                     <span>0895438891</span>
                 </div>
-                <div class="item">
-                    <i class="fas fa-envelope"></i>
-                    <span>dimas@example.com</span>
+                <div class="info-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>Lamajang Peuntas RT 02 RW 05</span>
                 </div>
-                <div class="item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Lamajang Peuntas RT 02/05</span>
-                </div>
-                <div class="item">
-                    <i class="fab fa-instagram"></i>
+                <div class="info-item">
+                    <i data-lucide="instagram"></i>
                     <span>@dimas</span>
                 </div>
-            </div>
-
-            <div class="skills-section">
-                <h3>KEAHLIAN</h3>
-                <div class="skill-bar">
-                    <span>Olahraga / Gym</span>
-                    <div class="progress"><div class="fill" style="width: 95%;"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <span>Bahasa Indonesia</span>
-                    <div class="progress"><div class="fill" style="width: 100%;"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <span>Bahasa Arab</span>
-                    <div class="progress"><div class="fill" style="width: 75%;"></div></div>
+                <div class="info-item">
+                    <i data-lucide="calendar"></i>
+                    <span>16 September 2006</span>
                 </div>
             </div>
-        </header>
 
-        <main class="main-content">
-            <section class="about">
-                <h2><i class="fas fa-user-circle"></i> Tentang Saya</h2>
-                <p>
-                    Saya adalah seorang individu yang **percaya diri**, disiplin, dan memiliki dedikasi tinggi. 
-                    Lahir pada 16 September 2006, saya memiliki minat besar dalam dunia kebugaran (gym) 
-                    dan aktif dalam berbagai kegiatan organisasi sejak bangku sekolah dasar hingga menengah atas.
-                </p>
+            <h3 class="sidebar-title">Keahlian</h3>
+            <div class="skills">
+                <span class="skill-tag">Olahraga</span>
+                <span class="skill-tag">Kebugaran Dasar</span>
+                <span class="skill-tag">Leadership</span>
+                <span class="skill-tag">Bahasa Indonesia</span>
+                <span class="skill-tag">Dasar Bahasa Arab</span>
+                <span class="skill-tag">Manajemen Waktu</span>
+            </div>
+        </div>
+
+        <!-- Bagian Kanan -->
+        <div class="main-content">
+            <!-- Pendidikan -->
+            <section>
+                <div class="section-header">
+                    <i data-lucide="graduation-cap"></i>
+                    <h2>Pendidikan</h2>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="year">2023 - 2026</span>
+                    <span class="school-name">SMA KP Baleendah</span>
+                    <p>Status: Pelajar Aktif</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">2020 - 2023</span>
+                    <span class="school-name">SMP 1 Dayeuhkolot</span>
+                    <p>Status: Lulus</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="year">2014 - 2020</span>
+                    <span class="school-name">SD 03 Dayeuhkolot</span>
+                    <p>Status: Lulus</p>
+                </div>
             </section>
 
-            <section class="education">
-                <h2><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
-                <div class="timeline">
-                    <div class="edu-item">
-                        <h4>SMA KP Baleendah</h4>
-                        <span>2023 - 2026 (Lulus)</span>
-                    </div>
-                    <div class="edu-item">
-                        <h4>SMP 1 Dayeuhkolot</h4>
-                        <span>2020 - 2023 (Lulus)</span>
-                    </div>
-                    <div class="edu-item">
-                        <h4>SD 03 Dayeuhkolot</h4>
-                        <span>2014 - 2020 (Lulus)</span>
+            <!-- Pengalaman Organisasi -->
+            <section>
+                <div class="section-header">
+                    <i data-lucide="users"></i>
+                    <h2>Pengalaman Organisasi</h2>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">SD - SMP - SMA</span>
+                    <p>Aktif berpartisipasi dalam berbagai kegiatan organisasi sekolah, membantu dalam koordinasi acara, dan mengembangkan kemampuan komunikasi antar sesama siswa.</p>
+                </div>
+            </section>
+
+            <!-- Hobi -->
+            <section>
+                <div class="section-header">
+                    <i data-lucide="dumbbell"></i>
+                    <h2>Hobi & Minat</h2>
+                </div>
+                <div class="hobby-card">
+                    <i data-lucide="trophy" size="32"></i>
+                    <div>
+                        <strong>GYM & Angkat Beban</strong>
+                        <p>Fokus pada pembentukan fisik, kedisiplinan diri, dan gaya hidup sehat setiap harinya.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="experience">
-                <h2><i class="fas fa-users"></i> Pengalaman Organisasi</h2>
-                <ul>
-                    <li><strong>Pengurus Organisasi SMA:</strong> Aktif mengelola kegiatan sekolah (2023-2026).</li>
-                    <li><strong>Anggota Organisasi SMP:</strong> Berpartisipasi dalam event internal sekolah.</li>
-                    <li><strong>Kegiatan Siswa SD:</strong> Memulai langkah awal kepemimpinan di sekolah dasar.</li>
-                </ul>
-            </section>
-
-            <section class="hobbies">
-                <h2><i class="fas fa-heart"></i> Hobi</h2>
-                <div class="hobby-chips">
-                    <span><i class="fas fa-dumbbell"></i> Gym</span>
-                    <span><i class="fas fa-running"></i> Olahraga</span>
-                    <span><i class="fas fa-book"></i> Belajar Bahasa</span>
+            <!-- Sertifikat -->
+            <section>
+                <div class="section-header">
+                    <i data-lucide="award"></i>
+                    <h2>Sertifikat & Bahasa</h2>
+                </div>
+                <div class="cert-item">
+                    <span>Sertifikat Kemampuan Bahasa Indonesia</span>
+                    <i data-lucide="check-circle" style="color: var(--light-green)"></i>
+                </div>
+                <div class="cert-item">
+                    <span>Sertifikat Kemampuan Bahasa Arab</span>
+                    <i data-lucide="check-circle" style="color: var(--light-green)"></i>
                 </div>
             </section>
-        </main>
+        </div>
     </div>
+
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+    </script>
 </body>
 </html>
